@@ -8,3 +8,12 @@
       package:
         name: [vim-nox, neovim]
         state: present
+
+    - name: get home dir variable
+      shell: echo $HOME
+      register: home
+
+    - name: copy nvim config to the remote
+      copy:
+        src: 'init.vim'
+        dest: "{{ home.stdout }}/.config/nvim/init.vim"

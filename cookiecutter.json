@@ -1,3 +1,6 @@
 {
-	"name": "vim"
+	"name": "vim",
+	"_copy_without_render": [
+		"playbook.yml"
+	]
 }
